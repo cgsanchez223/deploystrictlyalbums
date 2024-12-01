@@ -14,11 +14,11 @@ app.use(express.json());
 
 // Database Configuration
 const pool = new Pool({
-    user: process.env.PGADMIN_DATABASE_USER,
-    host: process.env.PGADMIN_DATABASE_HOST,
-    database: process.env.PGADMIN_DATABASE_NAME,
-    password: process.env.PGADMIN_DEFAULT_PASSWORD,
-    port: process.env.PGADMIN_LISTEN_PORT,
+    user: process.env.PG_DATABASE,
+    host: process.env.PG_HOST,
+    database: process.env.PG_DATABASE,
+    password: process.env.PG_PASSWORD,
+    port: process.env.PG_PORT,
 });
 
 // Routes

@@ -1,11 +1,11 @@
 1. To get started use "npm i" in the terminal to download all of the packages
 
 2. An env file should be created in the backend folder. It contains the following variables:
-PGADMIN_DATABASE_USER=yourusername
-PGADMIN_DATABASE_HOST=localhost
-PGADMIN_DATABASE_NAME=strictlyalbums
-PGADMIN_DEFAULT_PASSWORD=yourpassword
-PGADMIN_LISTEN_PORT=5432
+PG_DATABASE=yourusername
+PG_HOST=localhost
+PG_DATABASE=strictlyalbums
+PG_PASSWORD=yourpassword
+PG_PORT=5432
 JWT_SECRET=jwtpassword
 SPOTIFY_CLIENT_ID=
 SPOTIFY_CLIENT_SECRET=
