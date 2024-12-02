@@ -48,10 +48,10 @@ const AlbumDetail = () => {
             try {
                 const token = localStorage.getItem('token');
                 const [albumResponse, ratingResponse] = await Promise.all([
-                    fetch(`http://localhost:5007/api/spotify/albums/${id}`, {
+                    fetch(`https://deploystrictlyalbums.onrender.com/api/spotify/albums/${id}`, {
                         headers: { 'Authorization': `Bearer ${token}` }
                     }),
-                    fetch(`http://localhost:5007/api/ratings/album/${id}`, {
+                    fetch(`https://deploystrictlyalbums.onrender.com/api/ratings/album/${id}`, {
                         headers: { 'Authorization': `Bearer ${token}` }
                     })
                 ]);
@@ -88,7 +88,7 @@ const AlbumDetail = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5007/api/ratings', {
+            const response = await fetch('https://deploystrictlyalbums.onrender.com/api/ratings', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -123,7 +123,7 @@ const AlbumDetail = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5007/api/lists', {
+            const response = await fetch('https://deploystrictlyalbums.onrender.com/api/lists', {
                 headers: { 'Authorization': `Bearer ${token}` }
             });
 
@@ -147,7 +147,7 @@ const AlbumDetail = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5007/api/lists/${selectedListId}/albums`, {
+            const response = await fetch(`https://deploystrictlyalbums.onrender.com/api/lists/${selectedListId}/albums`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

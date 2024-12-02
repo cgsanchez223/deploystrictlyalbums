@@ -21,7 +21,7 @@ const Profile = () => {
         try {
             const token = localStorage.getItem('token');
             // Fetch profile with ratings
-            const profileResponse = await fetch('http://localhost:5007/api/profile', {
+            const profileResponse = await fetch('https://deploystrictlyalbums.onrender.com/api/profile', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -34,7 +34,7 @@ const Profile = () => {
             const profileData = await profileResponse.json();
 
             // Fetch user's lists
-            const listsResponse = await fetch('http://localhost:5007/api/lists', {
+            const listsResponse = await fetch('https://deploystrictlyalbums.onrender.com/api/lists', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

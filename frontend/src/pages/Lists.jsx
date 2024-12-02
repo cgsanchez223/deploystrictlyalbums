@@ -18,7 +18,7 @@ const Lists = () => {
     const fetchLists = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5007/api/lists', {
+            const response = await fetch('https://deploystrictlyalbums.onrender.com/api/lists', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

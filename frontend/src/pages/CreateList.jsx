@@ -38,7 +38,7 @@ const CreateList = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch('http://localhost:5007/api/lists', {
+            const response = await fetch('https://deploystrictlyalbums.onrender.com/api/lists', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

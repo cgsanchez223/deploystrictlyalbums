@@ -28,7 +28,7 @@ const EditList = () => {
     const fetchList = async () => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5007/api/lists/${listId}`, {
+            const response = await fetch(`https://deploystrictlyalbums.onrender.com/api/lists/${listId}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
@@ -73,7 +73,7 @@ const EditList = () => {
     const handleRemoveAlbum = async (albumId) => {
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5007/api/lists/${listId}/albums/${albumId}`, {
+            const response = await fetch(`https://deploystrictlyalbums.onrender.com/api/lists/${listId}/albums/${albumId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`
@@ -101,7 +101,7 @@ const EditList = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5007/api/lists/${listId}`, {
+            const response = await fetch(`https://deploystrictlyalbums.onrender.com/api/lists/${listId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -135,7 +135,7 @@ const EditList = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5007/api/lists/${listId}`, {
+            const response = await fetch(`https://deploystrictlyalbums.onrender.com/api/lists/${listId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`

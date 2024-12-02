@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
             const token = localStorage.getItem('token');
             if (token) {
                 try {
-                    const response = await fetch('http://localhost:5007/api/auth/verify', {
+                    const response = await fetch('https://deploystrictlyalbums.onrender.com/api/auth/verify', {
                         headers: {
                             'Authorization': `Bearer ${token}`
                         }
@@ -49,7 +49,7 @@ export const AuthProvider = ({ children }) => {
     // Handles user registration. Sends response to server to obtain authentication.
     const register = async (username, email, password, avatar_url) => {
         try {
-            const response = await fetch('http://localhost:5007/api/auth/register', {
+            const response = await fetch('https://deploystrictlyalbums.onrender.com/api/auth/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -88,7 +88,7 @@ export const AuthProvider = ({ children }) => {
     // Retrieves user data for login access.
     const login = async (email, password) => {
         try {
-            const response = await fetch('http://localhost:5007/api/auth/login', {
+            const response = await fetch('https://deploystrictlyalbums.onrender.com/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

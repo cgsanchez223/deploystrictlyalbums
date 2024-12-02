@@ -34,7 +34,7 @@ const Search = () => {
 
         try {
             const token = localStorage.getItem('token');
-            const response = await fetch(`http://localhost:5007/api/spotify/search?query=${encodeURIComponent(searchTerm)}`, {
+            const response = await fetch(`https://deploystrictlyalbums.onrender.com/api/spotify/search?query=${encodeURIComponent(searchTerm)}`, {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }

@@ -26,14 +26,14 @@ const Dashboard = () => {
             const token = localStorage.getItem('token');
 
             // Fetch recent ratings
-            const ratingsResponse = await fetch('http://localhost:5007/api/profile/ratings?limit=3', {
+            const ratingsResponse = await fetch('https://deploystrictlyalbums.onrender.com/api/profile/ratings?limit=3', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
             });
 
             // Fetch user lists
-            const listsResponse = await fetch('http://localhost:5007/api/lists?limit=3', {
+            const listsResponse = await fetch('https://deploystrictlyalbums.onrender.com/api/lists?limit=3', {
                 headers: {
                     'Authorization': `Bearer ${token}`
                 }
