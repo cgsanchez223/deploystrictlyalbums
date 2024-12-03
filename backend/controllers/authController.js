@@ -114,7 +114,7 @@ const authController = {
             // Verify password
             const isPasswordValid = await bcrypt.compare(password, user.password_hash);
 
-            console.log(isPasswordValid)
+            // console.log(isPasswordValid)
 
             if (!isPasswordValid) {
                 return res.status(401).json({
